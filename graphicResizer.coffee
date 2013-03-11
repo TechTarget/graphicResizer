@@ -22,7 +22,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     property: true
 
   # plugin constructor
-  class Plugin
+  class Resizer
 
     constructor: (@element, options) ->
       @options = $.extend({}, defaults, options)
@@ -35,14 +35,10 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     init: ->
       return true
 
-    # another method
-    foo: () ->
-      return false
-
   # lightweight wrapper around the constructor that prevents multiple instantiations
   $.fn[pluginName] = (options) ->
     @each ->
       if !$.data(@, 'plugin_#{pluginName}')
-        $.data(@, 'plugin_#{pluginName}', new Plugin(@, options))
+        $.data(@, 'plugin_#{pluginName}', new Resizer(@, options))
       return
   return

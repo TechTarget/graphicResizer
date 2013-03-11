@@ -14,14 +14,14 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     }
   })(function($) {
     'use strict';
-    var Plugin, defaults, pluginName;
+    var Resizer, defaults, pluginName;
     pluginName = 'graphicResizer';
     defaults = {
       property: true
     };
-    Plugin = (function() {
+    Resizer = (function() {
 
-      function Plugin(element, options) {
+      function Resizer(element, options) {
         this.element = element;
         this.options = $.extend({}, defaults, options);
         this._defaults = defaults;
@@ -30,21 +30,17 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
         this.init();
       }
 
-      Plugin.prototype.init = function() {
+      Resizer.prototype.init = function() {
         return true;
       };
 
-      Plugin.prototype.foo = function() {
-        return false;
-      };
-
-      return Plugin;
+      return Resizer;
 
     })();
     $.fn[pluginName] = function(options) {
       return this.each(function() {
         if (!$.data(this, 'plugin_#{pluginName}')) {
-          $.data(this, 'plugin_#{pluginName}', new Plugin(this, options));
+          $.data(this, 'plugin_#{pluginName}', new Resizer(this, options));
         }
       });
     };
