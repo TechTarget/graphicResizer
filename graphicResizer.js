@@ -17,7 +17,10 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     var Resizer, defaults, pluginName;
     pluginName = 'graphicResizer';
     defaults = {
-      property: true
+      showToggle: true,
+      resizeSpeed: 500,
+      mouseEvent: 'click',
+      callback: function() {}
     };
     Resizer = (function() {
 
@@ -26,12 +29,42 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
         this.options = $.extend({}, defaults, options);
         this._defaults = defaults;
         this._name = pluginName;
-        this.el = $(this.element);
+        this.$el = $(this.element);
         this.init();
       }
 
       Resizer.prototype.init = function() {
-        return true;
+        var o, self, thisImg, toggle, trigger;
+        self = this;
+        o = this.options;
+        trigger = this.$el.find('.toggleSize');
+        toggle = $('<span class="embiggen"><span class="icon"></span></span>');
+        thisImg = void 0;
+        if (o.showToggle) {
+          trigger.prepend(toggle);
+        }
+        return trigger.on(o.mouseEvent, function(e) {
+          e.preventDefault();
+          thisImg = $(this);
+          if (thisImg.data('state') === 'expanded') {
+            self.$el.removeClass('figureExpanded').animate({
+              width: thisImg.data('origWidth') + 'px',
+              duration: o.resizeSpeed,
+              easing: 'easeInCubic'
+            }, function() {}, o.callback.call(this));
+            toggle.toggleClass('embiggen smallify');
+            return thisImg.data('state', 'closed');
+          } else {
+            self.$el.addClass('figureExpanded').animate({
+              width: '100%',
+              duration: o.resizeSpeed,
+              easing: 'easeOutCubic'
+            }, function() {}, o.callback.call(this));
+            toggle.toggleClass('embiggen smallify');
+            thisImg.data('state', 'expanded');
+            return thisImg.data('origWidth', thisImg.width());
+          }
+        });
       };
 
       return Resizer;

@@ -2,10 +2,10 @@
 html(lang='en')
   head
     meta(charset='utf-8')
-    title {{pluginName}}} Component Tests
+    title graphicResizer Component Tests
     link(rel='stylesheet', href='css/style.css', media='screen')
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
-    script(src='../pluginName.js')
+    script(src='../graphicResizer.js')
     script(src='javascript/test.js')
   body
     #micrositeContainer
@@ -15,8 +15,54 @@ html(lang='en')
             h2 Header
           #micrositeContent
             #micrositeContentColumnFull
-              h2 Full Col
-              include pluginName
+              .figure.figThumb.figResizeable
+                a.toggleSize(href='http://placekitten.com/500/500?image=1')
+                  img(src='http://placekitten.com/500/500?image=1', alt='')
+                .figCaption
+                  p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+              p In elementum sem felis, et sollicitudin mauris. Phasellus laoreet mauris sed libero tempus in porttitor metus fringilla. Praesent id odio orci, ut laoreet massa. Pellentesque a tellus vitae massa venenatis auctor et pretium erat. Praesent tristique adipiscing elit nec molestie. In tincidunt cursus porttitor. Pellentesque dapibus augue vitae massa ullamcorper dignissim. Vestibulum ante ipsum primis in faucibus orci luctus.
+              p Duis odio odio, laoreet eu tellus. Aenean lorem nisl, molestie ut pulvinar in, rhoncus pellentesque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis sollicitudin, lacus non volutpat porta, magna quam tincidunt nislem.
+              .figure.figSmall.figResizeable
+                a.toggleSize(href='http://placekitten.com/500/500?image=2')
+                  img(src='http://placekitten.com/500/500?image=2', alt='')
+                .figCaption
+                  p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+              p Lorem ipsum dolor sit amet, netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+              p In elementum sem felis, et sollicitudin mauris. Phasellus laoreet mauris sed libero tempus in porttitor metus fringilla. Praesent id odio orci, ut laoreet massa. Pellentesque a tellus vitae massa venenatis auctor et pretium erat. Praesent tristique adipiscing elit nec molestie. In tincidunt cursus porttitor. Pellentesque dapibus augue vitae massa ullamcorper dignissim. Vestibulum ante ipsum primis in faucibus orci luctus.
+              p Duis odio odio, laoreet eu tellus. Aenean lorem nisl, molestie ut pulvinar in, rhoncus pellentesque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis sollicitudin, lacus non volutpat porta, magna quam tincidunt nislem.
+              .figure.figMed.figResizeable
+                a.toggleSize(href='http://placekitten.com/500/500?image=3')
+                  img(src='http://placekitten.com/500/500?image=3', alt='')
+                .figCaption
+                  p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+              p Lorem ipsum dolor sit amet, netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+              p Proin quis felis est. Duis porta velit id mauris pulvinar non rhoncus dolor dapibus. Aliquam ut nulla et dui luctus tincidunt eget in sapien.
+              p In elementum sem felis, et sollicitudin mauris. Phasellus laoreet mauris sed libero tempus in porttitor metus fringilla. Praesent id odio orci, ut laoreet massa. Pellentesque a tellus vitae massa venenatis auctor et pretium erat. Praesent tristique adipiscing elit nec molestie. In tincidunt cursus porttitor. Pellentesque dapibus augue vitae massa ullamcorper dignissim. Vestibulum ante ipsum primis in faucibus orci luctus.
+              p Lorem ipsum dolor sit amet, netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+
+              .figure.figLarge.figResizeable
+                a.toggleSize(href='http://placekitten.com/500/500?image=4')
+                  img(src='http://placekitten.com/500/500?image=4', alt='')
+                .figCaption
+                  p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+              p Duis odio odio, laoreet eu tellus. Aenean lorem nisl, molestie ut pulvinar in, rhoncus pellentesque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis sollicitudin, lacus non volutpat porta, magna quam tincidunt nislem.
+              p Proin quis felis est. Duis porta velit id mauris pulvinar non rhoncus dolor dapibus. Aliquam ut nulla et dui luctus tincidunt eget in sapien.
+              p In elementum sem felis, et sollicitudin mauris. Phasellus laoreet mauris sed libero tempus in porttitor metus fringilla. Praesent id odio orci, ut laoreet massa. Pellentesque a tellus vitae massa venenatis auctor et pretium erat. Praesent tristique adipiscing elit nec molestie. In tincidunt cursus porttitor. Pellentesque dapibus augue vitae massa ullamcorper dignissim. Vestibulum ante ipsum primis in faucibus orci luctus.
+              p Proin quis felis est. Duis porta velit id mauris pulvinar non rhoncus dolor dapibus. Aliquam ut nulla et dui luctus tincidunt eget in sapien.
+              p In elementum sem felis, et sollicitudin mauris. Phasellus laoreet mauris sed libero tempus in porttitor metus fringilla. Praesent id odio orci, ut laoreet massa. Pellentesque a tellus vitae massa venenatis auctor et pretium erat. Praesent tristique adipiscing elit nec molestie. In tincidunt cursus porttitor. Pellentesque dapibus augue vitae massa ullamcorper dignissim. Vestibulum ante ipsum primis in faucibus orci luctus.
+              ul
+                li Lorem ipsum dolor sit amet, consect adipiscing elit.
+                li Aliquam tincidunt mauris eu risus.
+                li Vestibulum auctor amet dapibus necique lobortis.
+                li Donec sagittis congue amet facilisis.
+              p Lorem ipsum dolor sit amet, netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+              ol
+                li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                li Vitae ultricies malesuada sit amet.
+                li Etiam quis leo eleifend neque.
+              p Duis odio odio, laoreet eu tellus. Aenean lorem nisl, molestie ut pulvinar in, rhoncus pellentesque nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis sollicitudin, lacus non volutpat porta, magna quam tincidunt nislem.
+              p Proin quis felis est. Duis porta velit id mauris pulvinar non rhoncus dolor dapibus. Aliquam ut nulla et dui luctus tincidunt eget in sapien.
+
             #micrositeContentColumnLeft
               h2 Left Col
             #micrositeContentColumnRight
