@@ -5,7 +5,6 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
 
 
 (function() {
-
   (function(factory) {
     if (typeof define === 'function' && define.amd) {
       return define(['jquery'], factory);
@@ -15,6 +14,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
   })(function($) {
     'use strict';
     var Resizer, defaults, pluginName;
+
     pluginName = 'graphicResizer';
     defaults = {
       showToggle: true,
@@ -23,7 +23,6 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
       callback: function() {}
     };
     Resizer = (function() {
-
       function Resizer(element, options) {
         this.element = element;
         this.options = $.extend({}, defaults, options);
@@ -35,6 +34,7 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
 
       Resizer.prototype.init = function() {
         var o, self, thisImg, toggle, trigger;
+
         self = this;
         o = this.options;
         trigger = this.$el.find('.toggleSize');

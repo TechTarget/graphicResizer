@@ -1,7 +1,7 @@
 graphicResizer microsite component
 
 * Plugin: Graphic Resizer
-* Version: 0.0.1 (April 4 2011)
+* Version: 1.0.1 (April 4 2011)
 * Description: provides in-content resizing of graphics; the size of each image is controlled by a class name (.figThumb, .figSmall, .figMedium, .figLarge, .figFull) in the css
 * Options:
   * showToggle: boolean; will show the enlarge/close toggle link & icon

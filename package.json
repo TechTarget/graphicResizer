@@ -2,7 +2,7 @@
   "name": "graphicResizer",
   "main": "graphicResizer",
   "description": "jQuery plugin for graphicResizer",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "author": "Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)",
   "licenses": [{
     "type": "MIT",
