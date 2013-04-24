@@ -59,7 +59,7 @@ a:focus { color: #2ba6cb; outline: none; }
 .figModal { margin-top: 5px; }
 .figModal > a:hover { cursor: -moz-zoom-in; cursor: -ms-zoom-in; cursor: -webkit-zoom-in; cursor: zoom-in; }
 .figCaption { border-bottom: 2px solid #666; color: #666; padding: 5px; }
-.figCaption p { margin: 10px 0 5px; }
+.figCaption p { margin: 0 !important; }
 .figCaption p:first-child { margin: 0; }
 .figThumb img, .figSmall img, .figMedium img, .figLarge img, .figFull img { margin-top: 5px; width: 100%; }
 .figThumb { width: 70px; }
@@ -73,6 +73,7 @@ a:focus { color: #2ba6cb; outline: none; }
 .embiggen, .smallify { float: right; color: #666; text-transform: uppercase; line-height: 1.2em; font-size: .85em; }
 .embiggen:before { content: 'Enlarge'; }
 .smallify:before { content: 'Close'; }
-.embiggen span, .smallify span { background: url(http://loc.techtarget.com/ux/images/global/redesign2/spriteGlobal.png) no-repeat -219px -65px; display: inline-block; height: 9px; margin: 0 0 0 3px; width: 8px; position: relative; top: 0; }
-.smallify span { background-position: -229px -65px; top: -3px; height: 3px; width: 8px; }
 .embiggen:hover, .smallify:hover { text-decoration: none; }
+.embiggen span, .smallify span { top: 1px; height: 10px; width: 10px; background-repeat: no-repeat; background-position: 0 0; display: inline-block; margin: 0 0 0 3px; position: relative; }
+.embiggen span { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEdJREFUeNpi/P//PwMxgAldgJGRcS8IY4ijmwhUBBYAijPiNREngJoIsuo/DrwXpAZm4i88Zv2ijRtZsIjtwKaQkdgABwgwAE0XJZ+ryjf7AAAAAElFTkSuQmCC); }
+.smallify span { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC5JREFUeNpi/P//PwMxgImBSEB9hQxQN+4FMXHgvSA1MBN/4TELLMc4BHwNEGAA6R0VbUcmUoIAAAAASUVORK5CYII=); }

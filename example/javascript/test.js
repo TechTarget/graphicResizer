@@ -6,7 +6,10 @@ $(document).on('ready', function() {
   $('.figResizeable').graphicResizer({
     showToggle: true,
     resizeSpeed: 600,
-    mouseEvent: 'click'
+    mouseEvent: 'click',
+    callback: function() {
+      // console.log('callback');
+    }
   });
 
 });

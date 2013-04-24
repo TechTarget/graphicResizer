@@ -22,6 +22,11 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
     showToggle: true
     resizeSpeed: 500
     mouseEvent: 'click'
+    easing: {
+      expand: 'easeInCubic',
+      collapse: 'easeOutCubic'
+    }
+    toggleHtml: '<span class="embiggen"><span class="icon"></span></span>'
     callback: ->
 
   # plugin constructor
@@ -31,49 +36,62 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
       @options = $.extend({}, defaults, options)
       @_defaults = defaults
       @_name = pluginName
-      @$el = $(@element)
+      @el = $(@element)
       @init()
 
     # initialize plugin
     init: ->
-      self = this
-      o = @options
-      trigger = @$el.find('.toggleSize')
-      toggle = $('<span class="embiggen"><span class="icon"></span></span>')
-      thisImg = undefined
+      trigger = @el.find('.toggleSize')
+      toggle = $(@options.toggleHtml)
 
       # add in 'enlarge/close' text and icon
-      trigger.prepend toggle if o.showToggle
+      trigger.prepend(toggle) if @options.showToggle
 
       # mouse event handler
-      trigger.on o.mouseEvent, (e) ->
+      trigger.on @options.mouseEvent, (e) =>
 
         e.preventDefault()
 
-        thisImg = $(this)
-
-        # when the image is in an expenaded state, shrink it to it's
-        # orginal dimensions and switch the className of the toggle button
-        # when the image is in a closed state, expand it to 100%
-        # of the available width and store it's original dimensions
-        if thisImg.data('state') is 'expanded'
-          self.$el.removeClass('figureExpanded').animate
-            width: thisImg.data('origWidth') + 'px',
-            duration: o.resizeSpeed
-            easing: 'easeInCubic', ->
-            o.callback.call this
-          toggle.toggleClass 'embiggen smallify' # it worked! the debigulator worked!
-          thisImg.data 'state', 'closed'
+        if @el.data('state') is 'expanded'
+          @el.removeClass('figureExpanded').animate({
+            width: @el.data('origWidth') + 'px'
+          },
+          {
+            duration: @options.resizeSpeed,
+            easing: @options.easing.expand
+          }, ->
+            @options.callback.call this
+          )
+          # it worked! the debigulator worked!
+          toggle.toggleClass 'embiggen smallify'
+          @el.data 'state', 'closed'
 
         else
-          self.$el.addClass('figureExpanded').animate
-            width: '100%',
-            duration: o.resizeSpeed
-            easing: 'easeOutCubic', ->
-            o.callback.call this
-          toggle.toggleClass 'embiggen smallify' # a noble spirit embiggens the smallest man
-          thisImg.data 'state', 'expanded'
-          thisImg.data 'origWidth', thisImg.width()
+          @el.addClass('figureExpanded').animate({
+            width: '100%'
+          },
+          {
+            duration: @options.resizeSpeed,
+            easing: @options.easing.collapse
+          }, ->
+            @options.callback.call this
+          )
+          # a noble spirit embiggens the smallest man
+          toggle.toggleClass 'embiggen smallify'
+          @el.data 'state', 'expanded'
+          @el.data 'origWidth', @el.width()
+
+    # when the image is in an expanded state, shrink it to it's
+    # original dimensions and switch the className of the toggle button
+    expand: ->
+      # console.log('expand')
+
+    # when the image is in a closed state, expand it to 100%
+    # of the available width and store it's original dimensions
+    collapse: ->
+      # console.log('collapse')
+
+
 
   # lightweight wrapper around the constructor that prevents multiple instantiations
   $.fn[pluginName] = (options) ->
