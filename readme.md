@@ -1,12 +1,3 @@
- microsite component
-
-* Options:
-
-
-
-
-
-
 # graphicResizer
 
 ## Summary
