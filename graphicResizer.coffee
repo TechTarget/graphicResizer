@@ -1,5 +1,5 @@
 ###!
-graphicResizer v0.0.1 (http://okize.github.com/)
+graphicResizer v0.0.1 (https://github.com/okize)
 Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 ###
 

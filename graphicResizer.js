@@ -1,5 +1,5 @@
 /*!
-graphicResizer v0.0.1 (http://okize.github.com/)
+graphicResizer v0.0.1 (https://github.com/okize)
 Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.php
 */
 
@@ -14,7 +14,6 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
   })(function($) {
     'use strict';
     var Resizer, defaults, pluginName;
-
     pluginName = 'graphicResizer';
     defaults = {
       showToggle: true,
@@ -40,7 +39,6 @@ Copyright (c) 2013 | Licensed under the MIT license - http://www.opensource.org/
       Resizer.prototype.init = function() {
         var toggle, trigger,
           _this = this;
-
         trigger = this.el.find('.toggleSize');
         toggle = $(this.options.toggleHtml);
         if (this.options.showToggle) {
