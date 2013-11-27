@@ -25,7 +25,7 @@ default:
 	@jade -D ./example/*.jade
 
 	@echo "* compiling coffeescript..."
-	@coffee -p ${SCRIPT_NAME}.coffee > ${SCRIPT_NAME}.js
+	@coffee --print ${SCRIPT_NAME}.coffee > ${SCRIPT_NAME}.js
 
 	@echo "* linting..."
 	@jshint ${SCRIPT_NAME}.js --show-non-errors
