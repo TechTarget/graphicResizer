@@ -1,11 +1,13 @@
 {
   "name": "graphicResizer",
-  "main": "graphicResizer",
-  "description": "jQuery plugin for graphicResizer",
+  "private": true,
+  "main": "graphicResizer.js",
+  "description": "jQuery plugin for inline graphic resizing",
   "version": "1.0.1",
   "author": "Morgan Wigmanich <okize123@gmail.com> (http://github.com/okize)",
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/TechTarget/graphicResizer/blob/master/license.md"
-  }]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechTarget/graphicResizer"
+  },
+  "license": "MIT"
 }
