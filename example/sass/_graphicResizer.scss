@@ -1,0 +1,119 @@
+.figure {
+  border: 0;
+  float: left;
+  font-size: 13px;
+  margin: 10px 20px 15px 0;
+  padding: 0;
+  width: 180px;
+  clear: both;
+}
+
+.figResizeable, .figModal {
+  img {
+    display: block; clear: right; width: 100%; position: relative;
+  }
+  .figCaption {
+    max-height: 14px; overflow: hidden;
+    p {
+      line-height: 1.5;
+    }
+  }
+}
+
+.figureExpanded .figCaption {
+  overflow: visible; max-height: none;
+}
+
+.figModal {
+  margin-top: 5px;
+}
+
+.figModal > a:hover {
+  cursor: -moz-zoom-in; cursor: -ms-zoom-in; cursor: -webkit-zoom-in; cursor: zoom-in;
+}
+
+.figCaption {
+  border-bottom: 2px solid #666; color: #666; padding: 5px;
+}
+
+.figCaption p {
+  margin: 0 !important;
+}
+
+.figCaption p:first-child {
+  margin: 0;
+}
+
+.figThumb img, .figSmall img, .figMedium img, .figLarge img, .figFull img {
+  margin-top: 5px; width: 100%;
+}
+
+.figThumb {
+  width: 70px;
+}
+
+.figSmall {
+  width: 145px;
+}
+
+.figMedium {
+  width: 290px;
+}
+
+.figLarge {
+  width: 390px;
+}
+
+.figFull {
+  width: 100%;
+}
+
+.toggleSize {
+  display: block;
+  overflow: visible;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.embiggen, .smallify {
+  float: right;
+  color: #666;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-size: .85em;
+  &:hover {
+    text-decoration: none;
+  }
+  span {
+    top: 1px;
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+    margin: 0 0 0 3px;
+    position: relative;
+  }
+}
+
+.embiggen {
+  &:before {
+    content: 'Enlarge';
+  }
+  span {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEdJREFUeNpi/P//PwMxgAldgJGRcS8IY4ijmwhUBBYAijPiNREngJoIsuo/DrwXpAZm4i88Zv2ijRtZsIjtwKaQkdgABwgwAE0XJZ+ryjf7AAAAAElFTkSuQmCC);
+  }
+}
+
+.smallify {
+  &:before {
+    content: 'Close';
+  }
+  span {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC5JREFUeNpi/P//PwMxgImBSEB9hQxQN+4FMXHgvSA1MBN/4TELLMc4BHwNEGAA6R0VbUcmUoIAAAAASUVORK5CYII=);
+  }
+}
