@@ -1,4 +1,4 @@
-SCRIPT_NAME = addThisBar
+SCRIPT_NAME = graphicResizer
 
 default:
 
